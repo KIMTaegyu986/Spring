@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="sjs" class="test.t0608EX.SungJukService" />
+	
+	<bean id="vo" class="test.t0608EX.SungJukVO">
+		<property name="kor" value="100"></property>
+		<property name="eng" value="70"></property>
+		<property name="mat" value="50"></property>
+		<property name="name" value="길동이"></property>
+		<property name="SungJukService">
+			<ref bean="sjs" />
+		</property>
+	</bean>
+
+	<bean id="vo1" class="test.t0608EX.SungJukVO">
+		<property name="kor" value="10"></property>
+		<property name="eng" value="90"></property>
+		<property name="mat" value="50"></property>
+		<property name="name" value="옥자"></property>
+		<property name="SungJukService">
+			<ref bean="sjs" />
+		</property>
+	</bean>
+	
+	<bean id="vo2" class="test.t0608EX.SungJukVO">
+		<property name="kor" value="90"></property>
+		<property name="eng" value="50"></property>
+		<property name="mat" value="70"></property>
+		<property name="name" value="말자"></property>
+		<property name="SungJukService">
+			<ref bean="sjs" />
+		</property>
+	</bean>
+
+</beans>
